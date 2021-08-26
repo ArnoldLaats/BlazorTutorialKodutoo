@@ -19,7 +19,7 @@ namespace EmployeeManagement.WebKodutoo.Pages
 
         public List<Department> Departments { get; set; } = new List<Department>();
 
-        public string Id { get; set; }
+        public Guid DepartmentId { get; set; }
 
         [Parameter]
         public string Id { get; set; }
@@ -29,7 +29,6 @@ namespace EmployeeManagement.WebKodutoo.Pages
         {
             Employee = await EmployeeService.GetEmployee(int.Parse(Id));
             Departments = (await DepartmentService.GetDepartments()).ToList();
-            DeparmentId = Employee.DepartmentId.ToString();
         }
     }
 }
