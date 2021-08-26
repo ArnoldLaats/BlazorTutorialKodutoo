@@ -1,16 +1,12 @@
-﻿@page "/pc" 
+﻿@page "/pc"
 
-<ChildComponent InputAttributes="attributesFromParent" Value="Parent Value">
-</ChildComponent>
+<h1 style="@System.Drawing.Color">Parent Component Text</h1>
+
+<CascadingValue Value="@Style">
+    <ChildComponent>
+    </ChildComponent>
+</CascadingValue>
 
 @code {
-    [Parameter]
-    public Dictionary<string, object> attributesFromParent { get; set; } =
-        new Dictionary<string, object>()
-        {
-            { "required", "required" },
-            { "placeholder", "Parent Component Placeholder" },
-            { "size", "50" },
-            { "maxlength", "5" }
-            };
+    public string Style { get; set; } = "color:red";
 }
