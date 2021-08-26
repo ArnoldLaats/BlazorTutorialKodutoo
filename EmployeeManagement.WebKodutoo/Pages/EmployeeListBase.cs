@@ -27,7 +27,7 @@ namespace EmployeeManagement.WebKodutoo.Pages
                 Email = "David@pragimtech.com",
                 DateOfBirth = new DateTime(1980, 10, 5),
                 Gender = Gender.Male,
-                Department = new Department { DepartmentId = 1, DepartmentName = "Random" },
+                DepartmentId = 1,
                 PhotoPath = "images/john.png"
             };
             Employee e2 = new Employee
@@ -38,7 +38,7 @@ namespace EmployeeManagement.WebKodutoo.Pages
                 Email = "SasWicky@dunno.com",
                 DateOfBirth = new DateTime(1992, 20, 7),
                 Gender = Gender.Female,
-                Department = new Department { DepartmentId = 2, DepartmentName = "Sasky" },
+                DepartmentId = 1,
                 PhotoPath = "images/wicky.png"
             };
 

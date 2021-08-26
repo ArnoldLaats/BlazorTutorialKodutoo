@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagement.ModelsKo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagement.WebKodutoo", "EmployeeManagement.WebKodutoo\EmployeeManagement.WebKodutoo.csproj", "{9CD62334-EDF4-4E03-AAAA-27AFFF8BA85B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagement.ApiKodutoo", "EmployeeManagement.ApiKodutoo\EmployeeManagement.ApiKodutoo.csproj", "{B7573F6B-8A15-4AC1-96DD-4D56C52014FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9CD62334-EDF4-4E03-AAAA-27AFFF8BA85B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9CD62334-EDF4-4E03-AAAA-27AFFF8BA85B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9CD62334-EDF4-4E03-AAAA-27AFFF8BA85B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7573F6B-8A15-4AC1-96DD-4D56C52014FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7573F6B-8A15-4AC1-96DD-4D56C52014FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7573F6B-8A15-4AC1-96DD-4D56C52014FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7573F6B-8A15-4AC1-96DD-4D56C52014FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
