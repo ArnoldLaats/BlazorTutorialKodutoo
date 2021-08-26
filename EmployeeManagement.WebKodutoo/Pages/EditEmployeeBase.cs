@@ -1,4 +1,5 @@
 ﻿using EmployeeManagement.ModelsKodutoo;
+using EmployeeManagement.WebKodutoo.Models;
 using EmployeeManagement.WebKodutoo.Services;
 using Microsoft.AspNetCore.Components;
 using System;
@@ -13,6 +14,8 @@ namespace EmployeeManagement.WebKodutoo.Pages
         [Inject]
         public IEmployeeService EmployeeService { get; set; }
         public Employee Employee { get; set; } = new Employee();
+
+        public EditEmployeeModel EditEmployeeModel { get; set; } = new EditEmployeeModel;
 
         [Inject]
         public IDepartmentService DepartmentService { get; set; }
