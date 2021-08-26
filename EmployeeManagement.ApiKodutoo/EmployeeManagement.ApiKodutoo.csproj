@@ -10,6 +10,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EmployeeManagement.ModelsKodutoo\EmployeeManagement.ModelsKodutoo.csproj" />
+    <ProjectReference Include="..\EmployeeManagement.WebKodutoo\EmployeeManagement.WebKodutoo.csproj" />
+    <ProjectReference Include="..\PragimTech.ComponentsKodutoo\PragimTech.ComponentsKodutoo.csproj" />
   </ItemGroup>
 
 

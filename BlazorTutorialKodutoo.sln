@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagement.WebKodut
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagement.ApiKodutoo", "EmployeeManagement.ApiKodutoo\EmployeeManagement.ApiKodutoo.csproj", "{B7573F6B-8A15-4AC1-96DD-4D56C52014FD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PragimTech.ComponentsKodutoo", "PragimTech.ComponentsKodutoo\PragimTech.ComponentsKodutoo.csproj", "{1AD904E1-382B-4220-B5D2-C86AAC30BA79}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{B7573F6B-8A15-4AC1-96DD-4D56C52014FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7573F6B-8A15-4AC1-96DD-4D56C52014FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7573F6B-8A15-4AC1-96DD-4D56C52014FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AD904E1-382B-4220-B5D2-C86AAC30BA79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AD904E1-382B-4220-B5D2-C86AAC30BA79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AD904E1-382B-4220-B5D2-C86AAC30BA79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AD904E1-382B-4220-B5D2-C86AAC30BA79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
