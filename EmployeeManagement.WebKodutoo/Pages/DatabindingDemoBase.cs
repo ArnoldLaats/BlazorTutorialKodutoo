@@ -8,7 +8,6 @@ namespace EmployeeManagement.WebKodutoo.Pages
 {
     public class DatabindingDemoBase : ComponentBase
     {
-        protected string Name { get; set; } = "Tom";
-        protected string Gender { get; set; } = "Male";
+        public string Description { get; set; } = string.Empty;
     }
 }
