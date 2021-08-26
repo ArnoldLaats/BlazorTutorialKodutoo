@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using EmployeeManagement.ModelsKodutoo;
+using Microsoft.EntityFrameworkCore;
 
 namespace EmployeeManagement.ApiKodutoo.Models
 {
@@ -25,7 +26,7 @@ namespace EmployeeManagement.ApiKodutoo.Models
         public async void DeleteEmployee(int employeeId)
         {
             var result = await appDbContext.Employees
-                .FirstOrDefault(e => e.EmployeeId == employeeId);
+                .FirstOrDefaultAsync(e => e.EmployeeId == employeeId);
             if (result != null)
             {
                 appDbContext.Employees.Remove(result);
@@ -36,7 +37,12 @@ namespace EmployeeManagement.ApiKodutoo.Models
         public async Task<Employee> GetEmployee(int employeeId)
         {
             return await appDbContext.Employees
-                .FirstOrDefault(e => e.EmployeeId == employeeId);
+                .FirstOrDefaultAsync(e => e.EmployeeId == employeeId);
+        }
+        public async Task<Employee> GetEmployeeByEmail(string email)
+        {
+            return await appDbContext.Employees
+                .FirstOrDefaultAsync(e => e.Email == email);
         }
 
         public async Task<IEnumerable<Employee>> GetEmployees()

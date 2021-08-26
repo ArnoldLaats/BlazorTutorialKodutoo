@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EmployeeManagement.ModelsKodutoo;
 
 namespace EmployeeManagement.ApiKodutoo.Controllers
 {
@@ -60,6 +61,14 @@ namespace EmployeeManagement.ApiKodutoo.Controllers
                 if(employee == null)
                 {
                     return BadRequest();
+                }
+
+                var emp = employeeRepository.GetEmployeeByEmail(employee.Email);
+
+                if(emp != null)
+                {
+                    ModelState.AddModelError("email", "Employee email already in use");
+                    return BadRequest(ModelState);
                 }
 
                 var createdEmployee = await employeeRepository.AddEmployee(employee);
