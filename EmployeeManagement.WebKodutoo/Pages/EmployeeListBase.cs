@@ -12,6 +12,8 @@ namespace EmployeeManagement.WebKodutoo.Pages
     {
         [Inject]
         public IEmployeeService EmployeeService { get; set; }
+
+        public bool ShowFooter { get; set; }
         
         public IEnumerable<Employee> Employees { get; set; }
 
