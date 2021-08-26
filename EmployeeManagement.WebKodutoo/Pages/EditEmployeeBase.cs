@@ -15,6 +15,8 @@ namespace EmployeeManagement.WebKodutoo.Pages
         public IEmployeeService EmployeeService { get; set; }
         public Employee Employee { get; set; } = new Employee();
 
+        public string PageHeaderText { get; set; }
+
         public EditEmployeeModel EditEmployeeModel { get; set; } = new EditEmployeeModel;
 
         [Inject]
@@ -34,10 +36,12 @@ namespace EmployeeManagement.WebKodutoo.Pages
 
             if (employeeId != 0)
             {
+                PageHeaderText = "Edit Employee";
                 Employee = await EmployeeService.GetEmployee(int.Parse(Id));
             }
             else
             {
+                PageHeaderText = "Create Employee";
                 Employee = new Employee
                 {
                     DepartmentId = 1,
