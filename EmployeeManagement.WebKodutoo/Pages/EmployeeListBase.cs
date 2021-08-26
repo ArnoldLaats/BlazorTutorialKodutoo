@@ -11,41 +11,38 @@ namespace EmployeeManagement.WebKodutoo.Pages
     {
         public IEnumerable<Employee> Employees { get; set; }
 
-        protected override Task OnInitializedAsync()
+        protected override async Task OnInitializedAsync()
         {
-            return base.OnInitializedAsync();
+            await Task.Run(LoadEmployees);
+        }
+
+        private void LoadEmployees()
+        {
+            System.Threading.Thread.Sleep(3000);
+            Employee e1 = new Employee
             {
-                LoadEmployees();
-                return base.OnInitializedAsync();
-            }
-        }
-    }
+                EmployeeId = 1,
+                FirstName = "John",
+                LastName = "Hastings",
+                Email = "David@pragimtech.com",
+                DateOfBirth = new DateTime(1980, 10, 5),
+                Gender = Gender.Male,
+                Department = new Department { DepartmentId = 1, DepartmentName = "Random" },
+                PhotoPath = "images/john.png"
+            };
+            Employee e2 = new Employee
+            {
+                EmployeeId = 1,
+                FirstName = "Wicky",
+                LastName = "Sasky",
+                Email = "SasWicky@dunno.com",
+                DateOfBirth = new DateTime(1992, 20, 7),
+                Gender = Gender.Female,
+                Department = new Department { DepartmentId = 2, DepartmentName = "Sasky" },
+                PhotoPath = "images/wicky.png"
+            };
 
-    private void LoadEmployees()
-    {
-        Employee e1 = new Employee
-        {
-            EmployeeId = 1,
-            FirstName = "John",
-            LastName = "Hastings",
-            Email = "David@pragimtech.com",
-            DateOfBirth = new DateTime(1980, 10, 5),
-            Gender = Gender.Male,
-            Department = new Department { DepartmentId = 1, DepartmentName = "Random" },
-            PhotoPath = "images/john.png"
+            Employees = new List<Employee> { e1, e2 };
         }
-        Employee e2 = new Employee
-        {
-            EmployeeId = 1,
-            FirstName = "Wicky",
-            LastName = "Sasky",
-            Email = "SasWicky@dunno.com",
-            DateOfBirth = new DateTime(1992, 20, 7),
-            Gender = Gender.Female,
-            Department = new Department { DepartmentId = 2, DepartmentName = "Sasky" },
-            PhotoPath = "images/wicky.png"
-        }
-
-        Employees = new List<Employee> { e1, e2 };
     }
 }

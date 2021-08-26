@@ -2,6 +2,12 @@
 @inherits EmployeeListBase
 
 <h3>EmployeeList</h3>
+@if(Employees == null)
+            {
+                <div class="spinner">
+
+                </div>
+            }
 
 <div class="card-deck">
     @foreach (var employee in Employees)
