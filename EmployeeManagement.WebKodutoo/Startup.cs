@@ -26,6 +26,7 @@ namespace EmployeeManagement.WebKodutoo
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAuthentication("Identity.Application").AddCookie();
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddHttpClient<IEmployeeService, EmployeeService>(client =>
@@ -52,7 +53,8 @@ namespace EmployeeManagement.WebKodutoo
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthentication();
+            app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapBlazorHub();
