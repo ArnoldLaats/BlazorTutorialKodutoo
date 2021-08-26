@@ -1,5 +1,8 @@
 ﻿<input id="firstName" @attributes="InputAttributes" value="@Value" />
 
+<ChildComponent InputAttributes="attributesFromParent" Value="Parent Value"
+                someattribute="somevalue"></ChildComponent>
+
 @code {
     [Parameter]
     public Dictionary<string, object> InputAttributes { get; set; } =
