@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagement.ModelsKodutoo", "EmployeeManagement.ModelsKodutoo\EmployeeManagement.ModelsKodutoo.csproj", "{EB6345A0-4CBA-4149-B28C-33EA5244B4BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagement.WebKodutoo", "EmployeeManagement.WebKodutoo\EmployeeManagement.WebKodutoo.csproj", "{9CD62334-EDF4-4E03-AAAA-27AFFF8BA85B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB6345A0-4CBA-4149-B28C-33EA5244B4BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB6345A0-4CBA-4149-B28C-33EA5244B4BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB6345A0-4CBA-4149-B28C-33EA5244B4BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB6345A0-4CBA-4149-B28C-33EA5244B4BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CD62334-EDF4-4E03-AAAA-27AFFF8BA85B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CD62334-EDF4-4E03-AAAA-27AFFF8BA85B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CD62334-EDF4-4E03-AAAA-27AFFF8BA85B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CD62334-EDF4-4E03-AAAA-27AFFF8BA85B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1CC0ECCF-7225-42DC-AA3A-F80034C77BB3}
+	EndGlobalSection
+EndGlobal
