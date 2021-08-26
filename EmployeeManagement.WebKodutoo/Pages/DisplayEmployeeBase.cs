@@ -19,5 +19,5 @@ namespace EmployeeManagement.WebKodutoo.Pages
         {
             await OnEmployeeSelection.InvokeAsync((bool)e.Value);
         }
-    
+    }
 }
