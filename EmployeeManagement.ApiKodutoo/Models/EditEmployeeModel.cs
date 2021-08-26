@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using EmployeeManagement.ModelsKodutoo;
+using EmployeeManagement.WebKodutoo.Services;
 
 namespace EmployeeManagement.ApiKodutoo.Models
 {
@@ -23,5 +24,17 @@ namespace EmployeeManagement.ApiKodutoo.Models
         public int DepartmentId { get; set; }
         public string PhotoPath { get; set; }
         public Department Department { get; set; } = new Department();
+        public NavigationManager NavigationManager { get; set; }
+
+        protected void HandleValidSubmit()
+        {
+            Mapper.Map(EditEmployeeModel, Employee);
+            var result = await EmployeeService.UpdateEmployee(Employee);
+
+            if(result != null)
+            {
+                NavigationManager.NavigateTo("/");
+            }
+        }
     }
 }
