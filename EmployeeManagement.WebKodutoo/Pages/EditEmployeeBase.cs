@@ -30,6 +30,22 @@ namespace EmployeeManagement.WebKodutoo.Pages
 
         protected async override Task OnInitalizedAsync()
         {
+            int.TryParse(Id, out int employeeId);
+
+            if (employeeId != 0)
+            {
+                Employee = await EmployeeService.GetEmployee(int.Parse(Id));
+            }
+            else
+            {
+                Employee = new Employee
+                {
+                    DepartmentId = 1,
+                    DateOfBirth = DateTime.Now,
+                    PhotoPath = "images/nophoto.jpg"
+                };
+            }
+
             Employee = await EmployeeService.GetEmployee(int.Parse(Id));
             Departments = (await DepartmentService.GetDepartments()).ToList();
 
@@ -44,6 +60,26 @@ namespace EmployeeManagement.WebKodutoo.Pages
             EditEmployeeModel.DepartmentId = Employee.DepartmentId;
             EditEmployeeModel.Department = Employee.Department;
             */
+        }
+
+        protected async Task HandleValidSubmit()
+        {
+            Mapper.Map(EditEmployeeModel, Employee);
+
+            Employee result = null;
+
+            if(Employee.EmployeeId != 0)
+            {
+                var result = await EmployeeService.UpdateEmployee(Employee);
             }
+            else
+            {
+                result = await EmployeeService.CreateEmployee(Employee);
+            }
+            if(result != null)
+            {
+                NavigationManager.NavigateTo("/");
+            }
+        }
     }
 }
